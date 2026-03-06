@@ -29,11 +29,10 @@ class EmailService {
       return { success: true, data };
     } catch (err) {
       console.error('EmailService Client Exception:', err);
-      // Fallback for local development if serverless is not running
-      if (import.meta.env.DEV) {
-         console.warn('Local Dev: Serverless function not detected. This is expected if running with vite alone.');
-      }
-      return { success: false, error: 'SERVICE_UNAVAILABLE' };
+      return { 
+        success: false, 
+        error: `CLIENT_ERROR: ${err.message || 'SERVICE_UNAVAILABLE'}` 
+      };
     }
   }
 }
