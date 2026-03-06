@@ -221,6 +221,8 @@ export const PORTFOLIO_DATA = {
     description: "Available for technical advisory, VAPT, or DevSecOps leadership opportunities. Pune, IN (Hybrid/Remote).",
     email: "paras615@gmail.com",
     phone: "+91-7498188204",
+    resumeUrl: "/resume_paras_patil.pdf",
+    resumeFilename: "Paras_Patil_Resume.pdf",
     socials: {
       linkedin: "https://www.linkedin.com/in/parascyber",
       medium: "https://medium.com/@parascyber",
