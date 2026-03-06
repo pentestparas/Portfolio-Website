@@ -49,6 +49,10 @@ ${message}
     return res.status(200).json({ success: true, id: data.id });
   } catch (err) {
     console.error('Vercel Function Error:', err);
-    return res.status(500).json({ error: 'INTERNAL_SERVER_ERROR' });
+    return res.status(500).json({ 
+      error: 'INTERNAL_SERVER_ERROR',
+      details: err.message,
+      stack: process.env.NODE_ENV === 'development' ? err.stack : undefined
+    });
   }
 }

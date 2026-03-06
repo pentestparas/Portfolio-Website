@@ -20,10 +20,22 @@ class EmailService {
         }),
       });
 
-      const data = await response.json();
+      let data = {};
+      const contentType = response.headers.get('content-type');
+      
+      if (contentType && contentType.includes('application/json')) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        console.error('Non-JSON Error Response:', text);
+        return { 
+          success: false, 
+          error: `SERVER_ERROR: ${response.status} (${response.statusText})` 
+        };
+      }
 
       if (!response.ok) {
-        return { success: false, error: data.error || 'API_ERROR' };
+        return { success: false, error: data.error || `API_ERROR_${response.status}` };
       }
 
       return { success: true, data };
@@ -31,7 +43,7 @@ class EmailService {
       console.error('EmailService Client Exception:', err);
       return { 
         success: false, 
-        error: `CLIENT_ERROR: ${err.message || 'SERVICE_UNAVAILABLE'}` 
+        error: `CLIENT_EXCEPTION: ${err.message}` 
       };
     }
   }
