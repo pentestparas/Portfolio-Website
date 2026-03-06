@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Terminal, Send, CheckCircle, ShieldAlert, AlertTriangle } from 'lucide-react';
 import DOMPurify from 'dompurify';
 import { PORTFOLIO_DATA } from '../constants/portfolioData';
+import { emailService } from '../services/emailService';
 
 export default function Contact() {
   const { contact } = PORTFOLIO_DATA;
@@ -18,7 +19,7 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSimulatedSubmit = (e) => {
+  const handleSimulatedSubmit = async (e) => {
     e.preventDefault();
     
     // Rate Limiting Check (10 second cooldown)
@@ -52,22 +53,48 @@ export default function Contact() {
     setTerminalLines(prev => [
       ...prev, 
       "> SANITIZING INPUT...",
+      "> GATHERING_TELEMETRY...",
       "> ENCRYPTING PAYLOAD...",
-      "> RESOLVING HOST...", 
-      "> TRANSMITTING PACKETS..."
+      "> RESOLVING SMTP HOST...", 
+      "> ATTEMPTING TRANSMISSION..."
     ]);
 
-    // Simulate network delay
-    setTimeout(() => {
+    // Gather Metadata
+    let metadata = { userAgent: navigator.userAgent };
+    try {
+      const geoResponse = await fetch('https://ipapi.co/json/');
+      const geoData = await geoResponse.json();
+      metadata = {
+        ...metadata,
+        ip: geoData.ip,
+        city: geoData.city,
+        country: geoData.country_name
+      };
+    } catch (err) {
+      console.warn('Geolocation capture failed:', err);
+    }
+
+    // Send via service
+    const result = await emailService.sendEmail(cleanData, metadata);
+
+    if (result.success) {
       setStatus('success');
       setTerminalLines(prev => [
         ...prev, 
-        "> 200 OK: PACKET DELIVERED SUCCESSFULLY",
+        result.simulated ? "> SIMULATION MODE: PACKET ACCEPT_DUMMY" : "> 200 OK: PAYLOAD DELIVERED VIA RESEND",
         "> CONNECTION TERMINATED."
       ]);
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setStatus('idle'), 5000);
-    }, 2500);
+    } else {
+      setStatus('error');
+      setTerminalLines(prev => [
+        ...prev,
+        `> ERROR: ${result.error || 'SSL_HANDSHAKE_FAILED'}`,
+        "> RETRY_LATER"
+      ]);
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   };
 
   return (
