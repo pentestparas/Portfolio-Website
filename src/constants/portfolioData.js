@@ -6,55 +6,64 @@ export const PORTFOLIO_DATA = {
     greeting: "INITIATING CONNECTION...",
     name: "Paras Patil",
     titles: [
-      "Security Engineer",
+      "Cybersecurity Engineer (4.5+ Years XP)",
       "Web3 & Blockchain Security",
-      "AppSec & DevSecOps",
-      "Bug Hunter & CEH"
+      "AppSec & DevSecOps Lead",
+      "Threat Modeler & Bug Hunter"
     ],
-    description: "Security Engineer with experience in delivering Application Security, Cloud Security, DevSecOps, and Penetration Testing initiatives across SaaS, FinTech, and Web3 environments. Always learning, building, and contributing to the security community.",
+    description: "Cybersecurity Engineer with strong expertise in Application Security, Cloud Security, DevSecOps, and Penetration Testing across SaaS, FinTech, and Web3 environments. Reducing risk through VAPT, secure design reviews, and automated security scaling.",
   },
   
   about: {
-    title: "System.Info('About_Me')",
+    title: "System.Info('Professional_Profile')",
     content: [
-      "I am a passionate Security Engineer skilled in automating CI/CD security gates, building secure SDLC processes, conducting VAPT, and supporting compliance frameworks including PCI-DSS, ISO 27001, GDPR, and NIST.",
-      "My hands-on experience spans across SAST, DAST, SCA, SBOM, API Security, Mobile Security, Cloud (AWS), and Threat Modeling (STRIDE, ASVS). I have delivered measurable outcomes including reducing the attack surface by 40%, improving patch compliance by 56%, and decreasing MTTD by 30% through cloud-based telemetry.",
-      "My core philosophy: You cannot defend what you do not understand. I am deeply interested in Web3 security, containerized workloads, and security governance for distributed systems."
+      "Cybersecurity Engineer with 4.5 years of experience expertise in Application Security, Cloud Security, DevSecOps, and Penetration Testing. Proven success in reducing risk through VAPT, threat modeling, secure SDLC, CI/CD security automation, and compliance with OWASP, NIST, ISO 27001, PCI-DSS & GDPR.",
+      "Adept at cross-functional collaboration, secure design reviews, and scaling security programs for hyper-growth organizations. I have delivered measurable outcomes including reducing the attack surface by 40%, boosting internal security awareness by 30%, and improving remediation turnaround by 40%.",
+      "My methodology integrates STRIDE-based threat modeling with automated CI/CD gates, ensuring security is a first-class citizen in the development lifecycle."
     ],
     stats: [
-      { label: "Vulnerabilities Found", value: "180+" },
-      { label: "Attack Surface Reduced", value: "40%" },
-      { label: "Compliance Focus", value: "ISO 27001, PCI-DSS" }
+      { label: "Vulnerabilities Identified", value: "250+" },
+      { label: "Risk Reduction", value: "55%" },
+      { label: "Security Workshops", value: "10+" },
+      { label: "Audit Success", value: "100%" }
     ]
   },
 
   skills: {
     categories: [
       {
-        title: "Application Security",
+        title: "Security Domains",
         items: [
-          { name: "Web3 & Blockchain Security", level: 90 },
-          { name: "SAST / DAST / SCA", level: 95 },
-          { name: "API & Mobile Security", level: 85 },
-          { name: "Code Review", level: 90 }
+          { name: "AppSec & API Security", level: 95 },
+          { name: "Web3 & Blockchain", level: 90 },
+          { name: "Mobile (Android/iOS)", level: 85 },
+          { name: "Cloud (AWS/GCP)", level: 90 },
+          { name: "Threat Modeling (STRIDE)", level: 95 }
         ]
       },
       {
-        title: "Cloud & DevSecOps",
+        title: "Pentest & Tooling",
         items: [
-          { name: "AWS WAF & CloudWatch", level: 85 },
+          { name: "Burp Suite / ZAP", level: 95 },
+          { name: "Nessus / Acunetix", level: 90 },
+          { name: "Metasploit / SQLMap", level: 85 },
+          { name: "MobSF / Frida / Wireshark", level: 85 }
+        ]
+      },
+      {
+        title: "DevSecOps & Automation",
+        items: [
+          { name: "SAST / DAST / IAST / SCA", level: 95 },
           { name: "CI/CD Security Gates", level: 90 },
-          { name: "Threat Modeling (STRIDE, ASVS)", level: 80 },
-          { name: "Containerized Workloads", level: 75 }
+          { name: "Python / JS / Bash", level: 85 }
         ]
       },
       {
-        title: "Compliance & Auditing",
+        title: "Frameworks & Governance",
         items: [
-          { name: "ISO 27001", level: 85 },
-          { name: "PCI-DSS", level: 80 },
-          { name: "GDPR & NIST", level: 80 },
-          { name: "Vulnerability Management", level: 95 }
+          { name: "OWASP Top 10 / ASVS", level: 95 },
+          { name: "ISO 27001 / PCI-DSS", level: 90 },
+          { name: "GDPR / NIST CSF", level: 85 }
         ]
       }
     ]
@@ -65,32 +74,40 @@ export const PORTFOLIO_DATA = {
       id: 1,
       name: "Certified Ethical Hacker (CEH v13)",
       issuer: "EC-Council",
-      date: "Active",
+      date: "2024",
       icon: "ShieldAlert",
       link: "#"
     },
     {
       id: 2,
-      name: "Certified AppSec Practitioner",
-      issuer: "SecOps",
-      date: "Active",
+      name: "Certified AppSec Practitioner (CAP)",
+      issuer: "The SecOps Group",
+      date: "2023",
       icon: "ShieldCheck",
       link: "#"
     },
     {
       id: 3,
-      name: "MKCL Certified IT Hardware Support",
-      issuer: "MKCL",
-      date: "Active",
-      icon: "Database",
+      name: "Cyber Warrior (Penetration Testing)",
+      issuer: "HackingFlix",
+      date: "2023",
+      icon: "Sword",
       link: "#"
     },
     {
       id: 4,
-      name: "Executive Postgrad: Cyber Security & Ethical Hacking",
-      issuer: "IIT Roorkee",
-      date: "2023 - 2024",
-      icon: "Terminal",
+      name: "ISO/IEC 27001 & ISO 9001 Associate",
+      issuer: "ISO",
+      date: "2022",
+      icon: "FileShield",
+      link: "#"
+    },
+    {
+      id: 5,
+      name: "Fortinet NSE1 & Cisco Networking Labs",
+      issuer: "Fortinet/Cisco",
+      date: "2022",
+      icon: "Network",
       link: "#"
     }
   ],
@@ -98,85 +115,96 @@ export const PORTFOLIO_DATA = {
   experience: [
     {
       id: 1,
-      title: "Security Engineer",
-      company: "Opcito Technologies",
-      date: "Feb 2026 - Present",
-      description: "Leading AppSec & Cloud Security for Web3 & SaaS platforms. Integrating CI/CD security controls and automating DevSecOps pipelines.",
-      tags: ["AppSec", "Cloud", "Web3"]
+      title: "Senior Associate Software Engineer – Cybersecurity",
+      company: "Byteosphere Software / IXFI",
+      date: "Aug 2023 – Present",
+      description: "Leading technical security for Web3/Crypto & SaaS. Engineered secure session frameworks using encrypted split cookies, CSRF tokens, and device fingerprinting. Deployed AWS WAF & CloudWatch reducing MTTD by 30%.",
+      tags: ["Web3", "AWS WAF", "STRIDE", "DevSecOps"]
     },
     {
       id: 2,
-      title: "Senior Associate Software Engineer (Cyber Security)",
-      company: "Byteosphere Software & IXFI Exchange",
-      date: "Jun 2025 - Jan 2026",
-      description: "Led AppSec & Cloud Security. Delivered VAPT & Secure SDLC improvements reducing attack surface by 40%. Built STRIDE threat models and deployed AWS WAF reducing MTTD by 30%.",
-      tags: ["VAPT", "STRIDE", "AWS WAF", "Python"]
+      title: "Cybersecurity Tester",
+      company: "Innover Systems",
+      date: "May 2022 – Jul 2023",
+      description: "Remediated 180+ vulnerabilities across 5+ government applications, reducing exploitable risks by 55%. Optimized Nessus scans to cut false positives by 30%. Executed Mobile AppSec with MobSF & Wireshark.",
+      tags: ["GovTech", "Mobile Sec", "VAPT"]
     },
     {
       id: 3,
-      title: "Cyber Security Tester",
-      company: "Innover Systems",
-      date: "May 2022 - Jul 2023",
-      description: "Identified & remediated 180+ vulnerabilities across GovTech apps reducing risk by 55%. Executed Mobile AppSec assessments using MobSF, Frida, and Wireshark.",
-      tags: ["GovTech", "Mobile AppSec", "MobSF"]
+      title: "Application Security Consultant",
+      company: "SISA Information Security",
+      date: "Sep 2021 – Apr 2022",
+      description: "Conducted 20+ penetration tests aligned with OWASP & PCI DSS, achieving 75% audit success. Developed custom Python scripts for vuln-scanning automation, saving 10+ hours weekly.",
+      tags: ["PCI DSS", "OWASP", "Python Automation"]
+    }
+  ],
+
+  securityDisclosures: [
+    { platform: "Reddit", severity: "Critical", status: "Acknowledged" },
+    { platform: "Extramarks", severity: "High", status: "Fixed" },
+    { platform: "Dhani", severity: "Critical", status: "Fixed" },
+    { platform: "Medplus Mart", severity: "High", status: "Fixed" }
+  ],
+
+  leadership: [
+    "Facilitated 10+ workshops, reducing misconfigurations by 25%.",
+    "Organized monthly meetups, training 50+ members in secure coding.",
+    "Published 2 technical research papers on Fraud Detection & Encryption."
+  ],
+
+  education: [
+    {
+      school: "IIT Roorkee",
+      degree: "PG Program in Cyber Security and Ethical Hacking",
+      date: "2023 – 2025"
     },
     {
-      id: 4,
-      title: "AppSec Consultant",
-      company: "SISA",
-      date: "Sep 2021 - Apr 2022",
-      description: "Conducted 20+ application security assessments aligned to OWASP & PCI DSS. Automated repetitive scanning tasks saving 10+ hrs/week.",
-      tags: ["PCI DSS", "OWASP"]
+      school: "Alard College of Engineering, Pune",
+      degree: "Bachelor of Engineering (Computer Engineering)",
+      date: "2017 – 2021"
+    },
+    {
+      school: "MIT Polytechnic, Pune",
+      degree: "Diploma in Computer Engineering",
+      date: "2013 – 2017"
     }
   ],
 
   projects: [
     {
       id: 1,
-      title: "Active Directory Lab Setup",
-      description: "Automated deployment of an intentionally vulnerable Active Directory environment using Terraform and Ansible for studying lateral movement, Kerberoasting, and domain privilege escalation.",
-      thumbnail: "ad-lab", // Placeholders for image handling
-      category: "Infrastructure",
-      tags: ["Terraform", "Ansible", "Active Directory", "Windows Server"],
+      title: "Transaction Fraud Detection",
+      description: "Research Publication: Using Face Authentication and Invisible Virtual Keyboard for fraud prevention. Published in IJRAR 2020.",
+      category: "Research",
+      tags: ["ML", "Security", "Biometrics", "Virtual Keyboard"],
       githubUrl: "#",
       liveUrl: "#"
     },
     {
       id: 2,
-      title: "Zero-Day Exploit POC",
-      description: "Reverse engineered a legacy IoT web interface, discovering an unauthenticated Remote Code Execution (RCE) vulnerability. Developed a Python script to reliably trigger the exploit.",
-      thumbnail: "zero-day",
-      category: "Exploit Dev",
-      tags: ["Python", "Reverse Engineering", "IoT", "RCE"],
+      title: "Encrypted Communication System",
+      description: "Research Publication: Advanced Security System Using Encrypted Communication. Published in IJERCSE 2016.",
+      category: "Research",
+      tags: ["Encryption", "Cybersecurity", "Embedded"],
       githubUrl: "#",
-      liveUrl: null
+      liveUrl: "#"
     },
     {
       id: 3,
-      title: "Custom C2 Framework",
-      description: "Developed a lightweight Command and Control (C2) framework written in Go with AES encrypted HTTP beacons, evading basic Windows Defender signatures.",
-      thumbnail: "c2-framework",
-      category: "Tooling",
-      tags: ["Golang", "Malware Dev", "Cryptography"],
+      title: "Active Directory Security Lab",
+      description: "Attack & Defense lab simulating lateral movement, Kerberoasting, and domain privilege escalation.",
+      category: "Infrastructure",
+      tags: ["AD", "Pentesting", "Windows Server"],
       githubUrl: "#",
-      liveUrl: null
-    },
-    {
-      id: 4,
-      title: "HackTheBox Writeup: Obscurity",
-      description: "Detailed walkthrough for the HTB machine 'Obscurity', focusing on identifying vulnerabilities in custom Python web servers and exploiting insecure deserialization.",
-      thumbnail: "htb-writeup",
-      category: "Writeup",
-      tags: ["HTB", "Web Exploitation", "Python"],
-      githubUrl: "#",
-      liveUrl: "#" // Link to a blog post/PDF
+      liveUrl: "#"
     }
   ],
 
   contact: {
     header: "ESTABLISH SECURE CONNECTION",
-    description: "My communication channels are open for Application Security, Cloud Security, and DevSecOps roles. Use the terminal below to send an encrypted message.",
+    description: "Available for technical advisory, VAPT, or DevSecOps leadership opportunities. Pune, IN (Hybrid/Remote).",
     email: "paras615@gmail.com",
+    phone: "+91-7498188204",
     socials: {
       linkedin: "https://www.linkedin.com/in/parascyber",
       medium: "https://medium.com/@parascyber",
