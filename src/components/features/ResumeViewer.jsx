@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { PORTFOLIO_DATA } from '../../constants/portfolioData';
-import { FileText, Download, Maximize2, ExternalLink } from 'lucide-react';
+import { ShieldCheck, Download, Maximize2, ExternalLink } from 'lucide-react';
 
 export default function ResumeViewer() {
   const { contact } = PORTFOLIO_DATA;
