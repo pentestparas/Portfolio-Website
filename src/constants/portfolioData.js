@@ -104,10 +104,26 @@ export const PORTFOLIO_DATA = {
     },
     {
       id: 5,
+      name: "Cyber Security Expert - Grade 1",
+      issuer: "Cybersecurity Fundamentals",
+      date: "2022",
+      icon: "Shield",
+      link: "#"
+    },
+    {
+      id: 6,
       name: "Fortinet NSE1 & Cisco Networking Labs",
       issuer: "Fortinet/Cisco",
       date: "2022",
       icon: "Network",
+      link: "#"
+    },
+    {
+      id: 7,
+      name: "Blended CyberSecurity",
+      issuer: "Tata STRIVE",
+      date: "2022",
+      icon: "Binary",
       link: "#"
     }
   ],
@@ -116,9 +132,9 @@ export const PORTFOLIO_DATA = {
     {
       id: 1,
       title: "Senior Associate Software Engineer – Cybersecurity",
-      company: "Byteosphere Software / IXFI",
+      company: "Byteosphere Software Pvt Ltd",
       date: "Aug 2023 – Present",
-      description: "Leading technical security for Web3/Crypto & SaaS. Engineered secure session frameworks using encrypted split cookies, CSRF tokens, and device fingerprinting. Deployed AWS WAF & CloudWatch reducing MTTD by 30%.",
+      description: "Demonstrating technical leadership in securing cryptocurrency platforms and SaaS environments. Engineered secure session frameworks using encrypted split cookies, CSRF tokens, and device fingerprinting. Deployed AWS WAF & CloudWatch reducing MTTD by 30%.",
       tags: ["Web3", "AWS WAF", "STRIDE", "DevSecOps"]
     },
     {
