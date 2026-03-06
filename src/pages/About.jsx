@@ -3,7 +3,6 @@ import ExperienceSection from '../components/features/ExperienceSection';
 import SecurityDisclosures from '../components/features/SecurityDisclosures';
 import LeadershipImpact from '../components/features/LeadershipImpact';
 import EducationSection from '../components/features/EducationSection';
-import ResumeViewer from '../components/features/ResumeViewer';
 
 export default function About() {
   return (
@@ -15,7 +14,6 @@ export default function About() {
         <SecurityDisclosures />
         <LeadershipImpact />
         <EducationSection />
-        <ResumeViewer />
       </div>
     </div>
   );
