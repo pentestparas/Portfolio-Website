@@ -16,13 +16,13 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'MISSING_PAYLOAD' });
   }
 
-  if (!process.env.RESEND_API_KEY) {
+  if (!process.env.VITE_RESEND_API_KEY) {
     return res.status(500).json({ error: 'MISSING_API_KEY_ON_SERVER' });
   }
 
-  const resend = new Resend(process.env.RESEND_API_KEY);
-  const toEmail = process.env.EMAIL_TO || 'paras615@gmail.com';
-  const fromEmail = process.env.EMAIL_FROM || 'onboarding@resend.dev';
+  const resend = new Resend(process.env.VITE_RESEND_API_KEY);
+  const toEmail = process.env.VITE_EMAIL_TO || 'paras615@gmail.com';
+  const fromEmail = process.env.VITE_EMAIL_FROM || 'onboarding@resend.dev';
 
   const { ip = 'Unknown', city = 'Unknown', country = 'Unknown', userAgent = 'Unknown' } = metadata || {};
 
